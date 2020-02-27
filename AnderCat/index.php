@@ -41,7 +41,7 @@ require_once('./message_sql.php');
 		  		<div class="comments col-12">
 		  			<div class="comment">
 						<div class="name">
-							<h3 class="mainName"><?php echo htmlspecialchars($row['nickname'],ENT_QUOTES, 'utf-8'); ?></h3>
+							<h3 class="mainName"><?php echo speacialChars($row['nickname']); ?></h3>
 							<span class="time"><?php echo $row['created_at'];?></span>
 						</div>
 						<div >
@@ -55,7 +55,7 @@ require_once('./message_sql.php');
 								<?php
 							}
 							?>
-						<pre><?php echo htmlspecialchars($row['comment'],ENT_QUOTES, 'utf-8');?></pre>
+						<pre><?php speacialChars($row['comment']);?></pre>
 						</div>
 					</div>
 					<?php
@@ -65,7 +65,7 @@ require_once('./message_sql.php');
 					<div class="sub-comments">
 						<div class="sub-comment" <?php echo $mainResponse; ?>>
 							<div class="name">
-								<h3><?php echo htmlspecialchars($sub_row['nickname'],ENT_QUOTES, 'utf-8'); ?></h3>
+								<h3><?php speacialChars($sub_row['nickname']); ?></h3>
 							<span class="time"><?php echo $sub_row['created_at'];?></span>
 							</div>
 							<div>
@@ -79,7 +79,7 @@ require_once('./message_sql.php');
 								<?php
 									}
 							?>
-										<pre><?php echo htmlspecialchars($sub_row['comment'],ENT_QUOTES, 'utf-8');?></pre>
+										<pre><?php speacialChars($sub_row['comment']); ?></pre>
 							</div>
 						</div>
 					</div>

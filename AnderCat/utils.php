@@ -19,6 +19,9 @@ function submitBtn($username){
   }
 }
 
+function speacialChars($context){
+  echo htmlspecialchars($context,ENT_QUOTES, 'utf-8');
+}
 
 
 function pages($pages) {

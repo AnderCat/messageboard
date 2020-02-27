@@ -283,4 +283,26 @@ $(document).ready(() => {
       return
     }
   });
+
+  $('.navbar').on('click','button', (e) =>{
+    const target = $(e.target);
+    if (target.hasClass('login')) {
+      $('.loginPage').css('display','block');
+      return
+    }
+    if (target.hasClass('reg')) {
+      $('.registerPage').css('display','block');
+      return
+    }
+  })
+  $('.userPage').on('click','button', (e) => {
+    $('.loginPage').toggle();
+    $('.registerPage').toggle();
+
+     if ($('.loginPage').css('display') == 'none') {
+      $('.toggle').html('已有帳號!我要登入');
+    } else {
+      $('.toggle').html('沒有帳號?來去註冊');
+    }
+  })
 });

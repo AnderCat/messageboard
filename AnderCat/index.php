@@ -19,15 +19,43 @@ require_once('./message_sql.php');
 	<script type="text/javascript" async src="./message_board.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-dark bg-primary">
+	<nav class="navbar navbar-dark bg-primary" id = "nav">
 		<a href="./index.php" class="home" style="text-decoration: none;">留言板</a>
 		<div class='form-line my-2 my-lg-0'>
 		<?php login($username); ?>
 		</div>
 	</nav>
+	<div class="userPage col-6">
+		<div class="loginPage">
+			<div class="register">
+				<form action="./handle_login.php" method="POST">
+					帳號<br/><input type="text" name="username" placeholder="請輸入帳號" class="form-control col-12"><br/>
+					密碼<br/><input type="password" name="password" placeholder="請輸入密碼" class="form-control col-12"><br/>
+					<div class="sub">
+						<input type="submit" name="save" id="btn" value="登入" class="col-12 btn btn-info">
+			    </div>
+				</form>
+				<button class="toggle col-12 btn btn-info">沒有帳號?來去註冊</button>
+			</div>
+		</div>
 
+		<div class="registerPage">
+			<div class="register">
+				<form action="./handle_register.php" method="POST">
+					暱稱<br/><input type="text" name="nickname" placeholder="請輸入暱稱" class="form-control col-12"><br/>
+					帳號<br/><input type="text" name="username" placeholder="請輸入帳號" class="form-control col-12"><br/>
+					密碼<br/><input type="password" name="password" placeholder="請輸入密碼" class="form-control col-12"><br/>
+					<div class="sub">
+						<input type="submit" name="save" id="btn" value="註冊" class="col-12 btn btn-info">
+	        </div>
+				</form>
+				<button class="toggle col-12 btn btn-info">已有帳號!現在登入</button>
+			</div>
+		</div>
+	</div>
 
 	<div class="container col-6">
+
 		<form method="POST" action="./handle_post.php" class="post col-12" >
 			<input type="hidden" value="0" name="parent_id">
 			<textarea type="textarea" name="message" class="user_message" placeholder="留言"></textarea>

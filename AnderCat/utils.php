@@ -6,8 +6,8 @@ function login($username){
     echo "<div class='hello'>你好 ,".$username . "</div>";
     echo "<a href='./logout.php' style='text-decoration:none' class='right'> 登出</a>";
   } else {
-    echo "<a href='./login.php' style='text-decoration:none;'>登入 </a>";
-    echo "<a href='./register.php' style='text-decoration:none;'>註冊</a>";
+    echo "<button style='text-decoration:none;' class='login'>登入 </button>";
+    echo "<button style='text-decoration:none;' class='reg'>註冊</button>";
   }
 }
 

@@ -305,4 +305,15 @@ $(document).ready(() => {
       $('.toggle').html('沒有帳號?來去註冊');
     }
   })
+
+  $('.userPage').on('click','div',(e) => {
+    if($(e.target).parents('.userPage').length !== 0 &&
+      !$(e.target).hasClass('register') &&
+      !$(e.target).hasClass('formPage') &&
+      !(e.target.nodeName === "BUTTON") &&
+      !(e.target.nodeName === "INPUT")) {
+      $('.loginPage').css('display','none');
+      $('.registerPage').css('display','none');
+    }
+  })
 });

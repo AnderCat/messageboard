@@ -28,7 +28,7 @@ require_once('./message_sql.php');
 	<div class="userPage col-6">
 		<div class="loginPage">
 			<div class="register">
-				<form action="./handle_login.php" method="POST">
+				<form action="./handle_login.php" method="POST" class="formPage">
 					帳號<br/><input type="text" name="username" placeholder="請輸入帳號" class="form-control col-12"><br/>
 					密碼<br/><input type="password" name="password" placeholder="請輸入密碼" class="form-control col-12"><br/>
 					<div class="sub">
@@ -41,7 +41,7 @@ require_once('./message_sql.php');
 
 		<div class="registerPage">
 			<div class="register">
-				<form action="./handle_register.php" method="POST">
+				<form action="./handle_register.php" method="POST" class="formPage">
 					暱稱<br/><input type="text" name="nickname" placeholder="請輸入暱稱" class="form-control col-12"><br/>
 					帳號<br/><input type="text" name="username" placeholder="請輸入帳號" class="form-control col-12"><br/>
 					密碼<br/><input type="password" name="password" placeholder="請輸入密碼" class="form-control col-12"><br/>
